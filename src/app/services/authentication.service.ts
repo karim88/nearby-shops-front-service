@@ -32,11 +32,15 @@ export class AuthenticationService implements AuthService {
     return of(accessToken);
   }
 
+  public getToken(): String {
+    return localStorage.getItem('accessToken');
+  }
+
   public refreshToken(): Observable<any> {
     const refreshToken: string = localStorage.getItem('refreshToken');
 
     return this.http
-      .post('http://localhost:3001/refresh-token', { refreshToken });
+      .post(`localhost:3001/refresh-token`, { refreshToken });
     // .catchError(() => this.logout());
   }
 
@@ -49,6 +53,7 @@ export class AuthenticationService implements AuthService {
   }
 
   public getInterruptedUrl(): string {
+    this.interruptedUrl = '/auth/login';
     return this.interruptedUrl;
   }
 

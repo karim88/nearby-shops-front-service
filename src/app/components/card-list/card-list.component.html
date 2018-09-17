@@ -1,3 +1,10 @@
-<p>
-  card-list works!
-</p>
+<div class="card-deck">
+  <app-card *ngFor="let shop of data" [shop]="shop" (liked)="updateShops($event)" [is_favorite]="is_favorite"></app-card>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-12">
+    <pagination [totalItems]="shops.total" [(ngModel)]="shops.current_page" [maxSize]="5" [boundaryLinks]="true" [itemsPerPage]="12" (pageChanged)="pageChanged($event)"></pagination>
+  </div>
+</div>
+

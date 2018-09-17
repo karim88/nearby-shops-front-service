@@ -1,3 +1,12 @@
-<p>
-  card works!
-</p>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{ shop.picture }}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ shop.name }}</h5>
+    <p class="card-text"><span class="">Email: {{ shop.email }}</span> <span class="">City: {{ shop.city }}</span></p>
+  </div>
+  <div class="card-body">
+    <button (click)="like(shop.id)" *ngIf="!is_favorite" class="card-link" ngClass="btn btn-success"><i class="fa fa-thumbs-up"></i> Like</button>
+    <button (click)="delete(shop.id)" *ngIf="is_favorite" class="card-link" ngClass="btn btn-warning"><i class="fa fa-times"></i> Delete</button>
+    <button class="card-link" *ngIf="!is_favorite" (click)="dislike(shop.id)" class="btn btn-danger pull-right"><i class="fa fa-thumbs-down"></i> Dislike</button>
+  </div>
+</div>
