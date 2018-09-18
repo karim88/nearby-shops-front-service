@@ -56,18 +56,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "nearbyshops:build"
+            "browserTarget": "nearby-shops-front:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "nearbyshops:build:production"
+              "browserTarget": "nearby-shops-front:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nearbyshops:build"
+            "browserTarget": "nearby-shops-front:build"
           }
         },
         "test": {
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "nearbyshops:serve"
+            "devServerTarget": "nearby-shops-front:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "nearbyshops:serve:production"
+              "devServerTarget": "nearby-shops-front:serve:production"
             }
           }
         },
