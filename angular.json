@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/nearby-shops-front",
+            "outputPath": "dist/nearbyshops",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -56,18 +56,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "nearby-shops-front:build"
+            "browserTarget": "nearbyshops:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "nearby-shops-front:build:production"
+              "browserTarget": "nearbyshops:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nearby-shops-front:build"
+            "browserTarget": "nearbyshops:build"
           }
         },
         "test": {
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "nearby-shops-front:serve"
+            "devServerTarget": "nearbyshops:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "nearby-shops-front:serve:production"
+              "devServerTarget": "nearbyshops:serve:production"
             }
           }
         },
