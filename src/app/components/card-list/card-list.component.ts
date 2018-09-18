@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output} from '@angular/core';
-import {ShopsService} from '../../services/shops.service';
-import {ToastrService} from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-card-list',
@@ -14,8 +13,7 @@ export class CardListComponent implements OnInit, OnChanges {
   @Output() paginate = new EventEmitter<number>();
   data: object[];
 
-  constructor(public shopsService: ShopsService,
-              public toastr: ToastrService) {
+  constructor() {
     this.data = [];
     this.is_favorite = false;
   }

@@ -1,1 +1,21 @@
+<nav class="navbar navbar-dark fixed-top navbar-expand-lg bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileReady" aria-controls="mobileReady" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="mobileReady">
+    <a class="navbar-brand" href="#"><img src="assets/images/hidden-founders.png" width="32" alt="Hidden Founders logo"></a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item" (click)="changeRoute()" [ngClass]="{'active': current_url === '/shops/nearby'}">
+        <a class="nav-link" routerLink="/shops/nearby"><i class="fa fa-shopping-basket"></i> Nearby Shops <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" (click)="changeRoute()" [ngClass]="{'active': current_url === '/shops/favorites'}">
+        <a class="nav-link" routerLink="/shops/favorites"><i class="fa fa-heart"></i> Favorite Shops</a>
+      </li>
+      <li class="nav-item" *ngIf="true">
+        <a class="nav-link" routerLink="/auth/logout"><i class="fa fa-sign-out"></i> Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <router-outlet></router-outlet>

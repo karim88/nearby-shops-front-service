@@ -65,6 +65,10 @@ export class AuthenticationService implements AuthService {
     return this.http.post(`${environment.apiUrl}/login`, JSON.stringify({ email: email.toLowerCase(), password: password }), this.options);
   }
 
+  public register(user: any) {
+    return this.http.post(`${environment.apiUrl}/register`, JSON.stringify(user), this.options);
+  }
+
   public logout() {
     localStorage.removeItem('accessToken');
   }

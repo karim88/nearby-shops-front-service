@@ -1,0 +1,11 @@
+.login {
+  background-color: #f8f9fa;
+  padding: 40px;
+}
+
+::ng-deep .login .row img {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

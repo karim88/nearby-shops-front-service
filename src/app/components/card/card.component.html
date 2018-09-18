@@ -1,8 +1,8 @@
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="{{ shop.picture }}" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">{{ shop.name }}</h5>
-    <p class="card-text"><span class="">Email: {{ shop.email }}</span> <span class="">City: {{ shop.city }}</span></p>
+    <h5 class="card-title">{{ shop.name }} | <span class="badge badge-info">{{ shop.city }}</span></h5>
+    <p class="card-text"><span class="">Email: {{ shop.email }}</span></p>
   </div>
   <div class="card-body">
     <button (click)="like(shop.id)" *ngIf="!is_favorite" class="card-link" ngClass="btn btn-success"><i class="fa fa-thumbs-up"></i> Like</button>

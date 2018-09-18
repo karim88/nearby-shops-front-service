@@ -1,4 +1,4 @@
-<div class="card-deck">
+<div class="card-columns">
   <app-card *ngFor="let shop of data" [shop]="shop" (liked)="updateShops($event)" [is_favorite]="is_favorite"></app-card>
 </div>
 

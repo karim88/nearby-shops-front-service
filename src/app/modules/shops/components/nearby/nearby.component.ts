@@ -17,23 +17,33 @@ export class NearbyComponent implements OnInit {
   ngOnInit() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
-        console.log(position);
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        this.shopsService.getShops(lat, lon, 1).subscribe((d: any) => {
+          this.data = d.shops;
+        }, error1 => {
+          this.toastr.warning('Error was occured when fetching data!');
+        });
       });
     } else {
       this.toastr.warning('Geolocation is not supported by this browser.');
     }
-    this.shopsService.getShops().subscribe((d: any) => {
-      this.data = d.shops;
-    }, error1 => {
-      this.toastr.warning('Error was occured when fetching data!');
-    });
   }
 
   paginated(page) {
-    this.shopsService.getShops(page).subscribe((d: any) => {
-      this.data = d.shops;
-    }, error1 => {
-      this.toastr.warning('Error was occured when fetching data!');
-    });
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        this.shopsService.getShops(lat, lon, page).subscribe((d: any) => {
+          this.data = d.shops;
+        }, error1 => {
+          this.toastr.warning('Error was occured when fetching data!');
+        });
+      });
+    } else {
+      this.toastr.warning('Geolocation is not supported by this browser.');
+    }
   }
 }

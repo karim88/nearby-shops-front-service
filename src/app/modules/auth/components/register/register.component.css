@@ -1,0 +1,11 @@
+.register {
+  background-color: #f8f9fa;
+  padding: 40px;
+}
+
+::ng-deep .register .row img {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

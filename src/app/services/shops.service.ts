@@ -19,8 +19,8 @@ export class ShopsService {
    * Get a collection of Shops
    * @param p
    */
-  getShops(p: number = 1): Observable<any> {
-    return this.http.get<any>(`${environment.apiUrl}/${this.routeName}?page=${p}`);
+  getShops(lat: number, lon: number, p: number = 1): Observable<any> {
+    return this.http.get<any>(`${environment.apiUrl}/${this.routeName}?page=${p}&lat=${lat}&lon=${lon}`);
   }
 
   /**
