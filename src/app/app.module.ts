@@ -11,7 +11,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptor } from './interceptors/token.interceptors';
 import { AuthModule, PROTECTED_FALLBACK_PAGE_URI, PUBLIC_FALLBACK_PAGE_URI, AUTH_SERVICE } from 'ngx-auth';
 import { AuthenticationService } from './services/authentication.service';
-import { HttpModule } from '@angular/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -25,7 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpModule,
+    HttpClientModule,
     HttpClientModule,
     AppAuthModule,
     ToastrModule.forRoot(),

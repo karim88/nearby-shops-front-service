@@ -33,6 +33,11 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: '',
+    redirectTo: 'shops/nearby',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
