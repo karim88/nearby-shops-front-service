@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthenticationService} from '../../../../services/authentication.service';
-import {ToastrService} from 'ngx-toastr';
-import {Router} from '@angular/router';
+import { AuthenticationService } from '../../../../services/authentication.service';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -14,8 +14,8 @@ export class RegisterComponent implements OnInit {
 
 
   constructor(public auth: AuthenticationService,
-              public toastr: ToastrService,
-              public router: Router) { }
+    public toastr: ToastrService,
+    public router: Router) { }
 
   ngOnInit() {
   }

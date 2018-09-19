@@ -1,3 +1,10 @@
-<div class="container" *ngIf="data">
+<div class="container" *ngIf="data && data.data.length > 0">
   <app-card-list [shops]="data" (paginate)="paginated($event)" [is_favorite]="true"></app-card-list>
+</div>
+
+<div class="container" *ngIf="!data || data.data.length === 0">
+  <div class="alert alert-warning" role="alert">
+    You did not like any shop, why?<br>
+    do some likes and come back ;-)
+  </div>
 </div>

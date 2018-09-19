@@ -1,6 +1,6 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ShopsService} from '../../services/shops.service';
-import {ToastrService} from 'ngx-toastr';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ShopsService } from '../../services/shops.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-card',
@@ -13,7 +13,7 @@ export class CardComponent implements OnInit {
   @Input() is_favorite: boolean;
   @Output() liked = new EventEmitter<boolean>();
   constructor(public shopsService: ShopsService,
-              public toastr: ToastrService) {
+    public toastr: ToastrService) {
   }
 
   ngOnInit() {

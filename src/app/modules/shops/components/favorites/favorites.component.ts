@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ShopsService} from '../../../../services/shops.service';
-import {ToastrService} from 'ngx-toastr';
+import { ShopsService } from '../../../../services/shops.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-favorites',
@@ -11,7 +11,7 @@ export class FavoritesComponent implements OnInit {
 
   data: any;
   constructor(public shopsService: ShopsService,
-              public toastr: ToastrService) {
+    public toastr: ToastrService) {
   }
 
   ngOnInit() {

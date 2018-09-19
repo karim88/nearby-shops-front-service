@@ -1,3 +1,7 @@
-.card-columns {
-  padding-top: 85px;
+.pagination-row {
+  margin-top: 30px;
+}
+
+.pagination-component {
+  display: flex;
 }

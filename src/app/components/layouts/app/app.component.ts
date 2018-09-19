@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-app',
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   /**
    * Change route url to be for active class
    */
-  changeRoute () {
+  changeRoute() {
     this.current_url = this.router.url;
   }
 

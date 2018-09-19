@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthComponent } from './components/layouts/auth/auth.component';
 import { AppComponent } from './components/layouts/app/app.component';
 import { PublicGuard, ProtectedGuard } from 'ngx-auth';
-import {LogoutComponent} from './modules/auth/components/logout/logout.component';
+import { LogoutComponent } from './modules/auth/components/logout/logout.component';
 
 const routes: Routes = [
   {

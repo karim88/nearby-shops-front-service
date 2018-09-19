@@ -1,10 +1,14 @@
-<div class="card-columns">
-  <app-card *ngFor="let shop of data" [shop]="shop" (liked)="updateShops($event)" [is_favorite]="is_favorite"></app-card>
+<div class="row">
+  <div class="col-md-4"  *ngFor="let shop of data">
+    <app-card [shop]="shop" (liked)="updateShops($event)" [is_favorite]="is_favorite"></app-card>
+  </div>
 </div>
 
-<div class="row">
+<div class="row pagination-row">
   <div class="col-xs-12 col-12">
-    <pagination [totalItems]="shops.total" [(ngModel)]="shops.current_page" [maxSize]="5" [boundaryLinks]="true" [itemsPerPage]="12" (pageChanged)="pageChanged($event)"></pagination>
+    <pagination class="mx-auto pagination-component" [totalItems]="shops.total" [(ngModel)]="shops.current_page"
+                [maxSize]="5" [boundaryLinks]="true" [itemsPerPage]="12"
+                (pageChanged)="pageChanged($event)"></pagination>
   </div>
 </div>
 
